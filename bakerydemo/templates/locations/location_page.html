@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailimages_tags navigation_tags %}
+{% load i18n %}
 
 {% block head-extra %}
     <style>
@@ -20,9 +21,9 @@
                         <h1>{{ page.title }}</h1>
                         <p class="stand-first">
                             {% if page.is_open %}
-                                This location is currently open
+                                {% translate "This location is currently open" %}
                             {% else %}
-                                Sorry, this location is currently closed
+                                {% translate "Sorry, this location is currently closed" %}
                             {% endif %}
                         </p>
                     </div>

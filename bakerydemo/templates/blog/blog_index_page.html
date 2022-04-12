@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags navigation_tags wagtailimages_tags %}
+{% load i18n %}
 
 {% block content %}
     {% include "base/include/header-index.html" %}
@@ -8,7 +9,7 @@
         {% if tag %}
             <div class="row">
                 <div class="col-md-12">
-                    <p>Viewing all blog posts by <span class="outline">{{ tag }}</span></p>
+                    <p>{% translate "Viewing all blog posts by" %} <span class="outline">{{ tag }}</span></p>
                 </div>
             </div>
         {% endif %}
@@ -47,7 +48,7 @@
                 {% endfor %}
             {% else %}
                 <div class="col-md-12">
-                    <p>Oh, snap. Looks like we were too busy baking to write any blog posts. Sorry.</p>
+                    <p>{% translate "Oh, snap. Looks like we were too busy baking to write any blog posts. Sorry." %}</p>
                 </div>
             {% endif %}
         </div>

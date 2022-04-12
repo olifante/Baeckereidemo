@@ -1,6 +1,10 @@
+{% load i18n %}
+
 {% comment %}
-    Content is coming from the StandardBlock StreamField
-    class within `blocks.py`
+    {% blocktranslate %}
+        Content is coming from the StandardBlock StreamField
+        class within `blocks.py`
+    {% endblocktranslate %}
 {% endcomment %}
 
 {% if self.size == 'h2' %}

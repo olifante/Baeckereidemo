@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags navigation_tags wagtailimages_tags %}
+{% load i18n %}
 
 {% block content %}
     <div class="container">
@@ -25,10 +26,10 @@
                         <h2>{{ bread.title }}</h2>
                         <ul class="bread-meta">
                         {% if bread.origin %}
-                            <li><span>Origin</span> {{ bread.origin }}</li>
+                            <li><span>{% translate "Origin" %}</span> {{ bread.origin }}</li>
                         {% endif %}
                         {% if bread.bread_type %}
-                            <li><span>Type</span> {{ bread.bread_type }}</li>
+                            <li><span>{% translate "Type" %}</span> {{ bread.bread_type }}</li>
                         {% endif %}
                         </ul>
                     </div>

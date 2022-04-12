@@ -55,6 +55,9 @@ INSTALLED_APPS = [
     'wagtail.api.v2',
     'wagtail.contrib.modeladmin',
     'wagtail.contrib.routable_page',
+    "wagtail_localize",
+    "wagtail_localize.locales",  # This replaces "wagtail.locales"
+    'wagtail_xliff_translation',
     'wagtail.core',
 
     'rest_framework',
@@ -81,6 +84,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.locale.LocaleMiddleware",
 
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 
@@ -151,6 +155,23 @@ USE_L10N = True
 
 USE_TZ = True
 
+WAGTAIL_I18N_ENABLED = True
+
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ('en', "English"),
+    ('fr', "French"),
+    ('es', "Spanish"),
+    ('ga', "Irish"),
+]
+
+SERIALIZATION_MODULES = {"xliff": "wagtail_xliff_translation.serializers"}
+
+WAGTAILLOCALIZE_MACHINE_TRANSLATOR = {
+    "CLASS": "wagtail_localize.machine_translators.google.GoogleCloudTranslator",
+    "OPTIONS": {
+        "PROJECT_ID": "bakery-demo-340000",
+    },
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

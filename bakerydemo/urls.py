@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import include, path
 
@@ -48,6 +49,9 @@ if settings.DEBUG:
         path('test500/', TemplateView.as_view(template_name='500.html')),
     ]
 
-urlpatterns += [
-    path('', include(wagtail_urls)),
-]
+# Translatable URLs
+# These will be available under a language code prefix. For example /en/search/
+urlpatterns += i18n_patterns(
+    path("", include(wagtail_urls)),
+    prefix_default_language=False,
+)

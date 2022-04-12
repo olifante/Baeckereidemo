@@ -14,7 +14,7 @@ from wagtail.admin.edit_handlers import (
     StreamFieldPanel,
 )
 from wagtail.core.fields import RichTextField, StreamField
-from wagtail.core.models import Collection, Page, BootstrapTranslatableMixin
+from wagtail.core.models import Collection, Page, TranslatableMixin
 from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
@@ -24,7 +24,7 @@ from .blocks import BaseStreamBlock
 
 
 @register_snippet
-class People(BootstrapTranslatableMixin, index.Indexed, ClusterableModel):
+class People(TranslatableMixin, index.Indexed, ClusterableModel):
     """
     A Django model to store People objects.
     It uses the `@register_snippet` decorator to allow it to be accessible
@@ -77,13 +77,13 @@ class People(BootstrapTranslatableMixin, index.Indexed, ClusterableModel):
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
 
-    class Meta(BootstrapTranslatableMixin.Meta):
+    class Meta(TranslatableMixin.Meta):
         verbose_name = 'Person'
         verbose_name_plural = 'People'
 
 
 @register_snippet
-class FooterText(BootstrapTranslatableMixin, models.Model):
+class FooterText(TranslatableMixin, models.Model):
     """
     This provides editable text for the site footer. Again it uses the decorator
     `register_snippet` to allow it to be accessible via the admin. It is made
@@ -99,7 +99,7 @@ class FooterText(BootstrapTranslatableMixin, models.Model):
     def __str__(self):
         return "Footer text"
 
-    class Meta(BootstrapTranslatableMixin.Meta):
+    class Meta(TranslatableMixin.Meta):
         verbose_name_plural = 'Footer Text'
 
 

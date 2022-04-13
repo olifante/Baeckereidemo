@@ -1,6 +1,7 @@
 {% load navigation_tags %}
+{% load i18n %}
 
-<nav role="pagination" aria-label="Pagination">
+<nav role="pagination" aria-label="{% translate 'Pagination' %}">
     <ul class="pagination">
         {% if subpages.has_previous %}
             <li class="page-item">

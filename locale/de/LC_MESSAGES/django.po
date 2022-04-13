@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-12 23:33+0000\n"
+"POT-Creation-Date: 2022-04-13 00:02+0000\n"
 "PO-Revision-Date: 2022-04-13 00:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -26,25 +26,28 @@ msgstr "Seite nicht gefunden"
 msgid "Sorry, this page could not be found."
 msgstr "Sorry, diese Seite konnte nicht gefunden werden."
 
-#: bakerydemo/templates/blog/blog_index_page.html:11
+#: bakerydemo/templates/blog/blog_index_page.html:12
 msgid "Viewing all blog posts by"
 msgstr "Alle Blogeinträge anzeigen von"
 
-#: bakerydemo/templates/blog/blog_index_page.html:50
-msgid "Oh, snap. Looks like we were too busy baking to write any blog posts. Sorry."
-msgstr "Oh, Mist. Sieht so aus, als wären wir zu sehr mit dem Backen beschäftigt gewesen, um irgendwelche Blogbeiträge zu schreiben. Sorry."
+#: bakerydemo/templates/blog/blog_index_page.html:51
+msgid ""
+"Oh, snap. Looks like we were too busy baking to write any blog posts. Sorry."
+msgstr ""
+"Oh, Mist. Sieht so aus, als wären wir zu sehr mit dem Backen beschäftigt "
+"gewesen, um irgendwelche Blogbeiträge zu schreiben. Sorry."
 
-#: bakerydemo/templates/blog/blog_page.html:36
+#: bakerydemo/templates/blog/blog_page.html:37
 msgid "Tagged with:"
 msgstr "Getaggt mit:"
 
 #: bakerydemo/templates/breads/bread_page.html:35
-#: bakerydemo/templates/breads/breads_index_page.html:28
+#: bakerydemo/templates/breads/breads_index_page.html:29
 msgid "Origin"
 msgstr "Herkunft"
 
 #: bakerydemo/templates/breads/bread_page.html:41
-#: bakerydemo/templates/breads/breads_index_page.html:31
+#: bakerydemo/templates/breads/breads_index_page.html:32
 msgid "Type"
 msgstr "Typ"
 
@@ -55,6 +58,10 @@ msgstr "Bachstelzenbäckerei"
 #: bakerydemo/templates/includes/header.html:8
 msgid "The Wagtail Bakery"
 msgstr "Die Bachstelzenbäckerei"
+
+#: bakerydemo/templates/includes/header.html:9
+msgid "Mobile menu"
+msgstr "Mobiles Menü"
 
 #: bakerydemo/templates/includes/header.html:10
 msgid "Toggle navigation"
@@ -68,45 +75,53 @@ msgstr "Suchbegriff eingeben"
 msgid "Primary site navigation"
 msgstr "Navigation am primären Standort"
 
-#: bakerydemo/templates/locations/location_page.html:23
+#: bakerydemo/templates/includes/pagination.html:4
+msgid "Pagination"
+msgstr "Paginierung"
+
+#: bakerydemo/templates/locations/location_page.html:24
 msgid "This location is currently open"
 msgstr "Dieser Standort ist derzeit geöffnet"
 
-#: bakerydemo/templates/locations/location_page.html:25
+#: bakerydemo/templates/locations/location_page.html:26
 msgid "Sorry, this location is currently closed"
 msgstr "Entschuldigung, dieser Standort ist derzeit geschlossen"
 
-#: bakerydemo/templates/search/search_box.html:8
-#: bakerydemo/templates/search/search_results.html:4
+#: bakerydemo/templates/search/search_box.html:10
+#: bakerydemo/templates/search/search_results.html:5
 msgid "Search"
 msgstr "Suche"
 
-#: bakerydemo/templates/search/search_results.html:4
+#: bakerydemo/templates/search/search_results.html:5
 msgid "results"
 msgstr "Ergebnisse"
 
-#: bakerydemo/templates/search/search_results.html:11
+#: bakerydemo/templates/search/search_results.html:12
 #, fuzzy
 #| msgid "Search the site"
 msgid "Search results"
 msgstr "Suchergebnisse"
 
-#: bakerydemo/templates/search/search_results.html:21
+#: bakerydemo/templates/search/search_results.html:22
 msgid "Blog post:"
 msgstr "Blog-Beitrag:"
 
-#: bakerydemo/templates/search/search_results.html:23
+#: bakerydemo/templates/search/search_results.html:24
 msgid "Location:"
 msgstr "Standort:"
 
-#: bakerydemo/templates/search/search_results.html:25
+#: bakerydemo/templates/search/search_results.html:26
 msgid "Bread"
 msgstr "Brot"
 
-#: bakerydemo/templates/search/search_results.html:34
+#: bakerydemo/templates/search/search_results.html:35
 msgid "No results found"
 msgstr "Keine Ergebnisse gefunden"
 
-#: bakerydemo/templates/search/search_results.html:36
+#: bakerydemo/templates/search/search_results.html:37
 msgid "You didn’t search for anything!"
 msgstr "Sie haben nach nichts gesucht!"
+
+#: bakerydemo/templates/tags/breadcrumbs.html:4
+msgid "breadcrumb"
+msgstr "Brotkrümel"
